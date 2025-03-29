@@ -8,20 +8,35 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black; /* يمنع ظهور أي فراغات غير مرغوبة */
             overflow: hidden;
         }
-        video {
-            position: absolute;
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100vw;
             height: 100vh;
-            object-fit: contain; /* عرض الفيديو بالكامل بدون قص */
-            background-color: black; /* خلفية سوداء لملء أي فراغات */
+        }
+        video {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* يعرض الفيديو بالكامل بدون قص */
         }
     </style> 
 </head> 
 <body> 
-  <video autoplay loop muted> 
-    <source src="video.mp4" type="video/mp4"> 
-  </video> 
+  <div class="video-container">
+    <video autoplay loop muted> 
+      <source src="video.mp4" type="video/mp4"> 
+    </video> 
+  </div>
 </body>
 </html>
