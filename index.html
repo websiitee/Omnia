@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar"> 
- <head> 
+<head> 
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Omnia</title> 
@@ -14,13 +14,14 @@
             position: absolute;
             width: 100vw;
             height: 100vh;
-            object-fit: cover;
+            object-fit: contain; /* عرض الفيديو بالكامل بدون قص */
+            background-color: black; /* خلفية سوداء لملء أي فراغات */
         }
     </style> 
- </head> 
- <body> 
+</head> 
+<body> 
   <video autoplay loop muted> 
-   <source src="video.mp4" type="video/mp4"> 
+    <source src="video.mp4" type="video/mp4"> 
   </video> 
- 
-</body></html>
+</body>
+</html>
